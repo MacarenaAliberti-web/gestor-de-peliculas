@@ -15,14 +15,22 @@ const movieToHtml = (movie) => {
     return container;
 };
 
-const addToHTML = () => {
+const addToHTML = (data) => {
     const movieCardsContainer = document.getElementById("movieCardsContainer"); //Pedirlo mediante el DOM
 
-    const movieElements = tempData.map(movieToHtml);
+    const movieElements = data.map(movieToHtml);
 
     movieElements.forEach((movieElem) => movieCardsContainer.appendChild(movieElem)); 
         
 };
-addToHTML();
 
+
+const getDataMovie = () => {
+    $.get("https://students-api.up.railway.app/movies", (data, status) => {
+    addToHTML(data);
+
+    });
+};
+
+getDataMovie();
 
