@@ -29,6 +29,24 @@ header > h1 {
 .navLinks > ul >li > a:hover {
     opacity: 0.7;
 }
+.navbar.navLinks .nav-item {
+    transition: transform 0.3s ease, color 0.3s ease; /* Agrega una transición suave para escala y color */
+}
+
+.navbar.navLinks .nav-item:hover {
+    transform: scale(1.05); /* Mantiene el efecto de agrandar ligeramente */
+}
+
+.navbar.navLinks .nav-link {
+    color: white !important; /* Mantiene el color blanco en los enlaces */
+    text-decoration: none; /* Asegura que no haya subrayado */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.navbar.navLinks .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7) !important; /* Cambia la opacidad al hacer hover */
+}
+
 main {
     background-image: url('../assets/2.webp'); 
     background-size: cover;      
