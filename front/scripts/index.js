@@ -23,7 +23,7 @@ const axios = require("axios");
 //ASYNC AWAIT
 const getDataMovie = async () => {
     try{
-    const res = await axios.get("https://students-api.up.railway.app/movies");
+    const res = await axios.get("http://localhost:3000/movies");
     addToHTML(res.data);
     } catch (error) {
         console.error(error.message);
