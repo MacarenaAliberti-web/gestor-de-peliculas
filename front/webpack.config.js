@@ -1,8 +1,19 @@
-module.exports = {
-    entry: "./scripts/index.js", //por donde queremos que empiece a escanear el webpack
+//module.exports = {
+//    entry: "./scripts/index.js", //por donde queremos que empiece a escanear el webpack
+//    output: {    //Archivo de salida
+//        path: __dirname + "/public",
+//        filename: "bundle.js",
+//    },
+//};
 
-    output: {    //Archivo de salida
+module.exports = {
+    entry: {
+        index: "./scripts/index.js",
+        about: "./scripts/aboutUs.js",
+        movieForm: "./scripts/movieForm.js",
+    },
+    output: {
+        filename:"[name].bundle.js",
         path: __dirname + "/public",
-        filename: "bundle.js",
     },
 };

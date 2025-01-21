@@ -16,7 +16,7 @@ const movieToHtml = (movie) => {
     button.classList.add("btn", "btn-outline-primary", "btn-sm");
     
     const cardBody = document.createElement("div");
-    cardBody.classList.add("card-body");
+    cardBody.classList.add("card-body", "bg-white");
 
     cardBody.append(title, button);
     container.append(image, cardBody);
