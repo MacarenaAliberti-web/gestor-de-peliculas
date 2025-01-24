@@ -1,0 +1,76 @@
+h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Aumenta el tamaño del texto para hacerlo más prominente */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: white;
+    width: 100%;
+    padding: 50px;
+    text-decoration: none;
+    border: none;
+    font-family: 'Arial', sans-serif; /* Mejora la legibilidad */
+}
+
+.sitios-web {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, hsl(188, 96%, 18%), hsl(240, 3%, 6%)); /* Fondo degradado */
+    margin: 20px auto;
+    max-width: 40%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para el contenedor */
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.sitios-web ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumenta el espacio entre los enlaces */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+.sitios-web a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: hsl(180, 9%, 4%);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent; /* Agrega un borde transparente para mejorar la animación */
+}
+
+.sitios-web a:hover {
+    background-color: hsl(188, 96%, 35%);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra en hover */
+}
+
+.sitios-web a:focus {
+    outline: 3px solid hsl(187, 82%, 96%); /* Contorno más visible al hacer foco */
+    outline-offset: 4px;
+    box-shadow: 0 0 5px 2px hsl(187, 82%, 96%); /* Sombra extra para el foco */
+}
+
+.sitios-web li {
+    list-style-type: none;
+}
+
+.sitios-web li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}

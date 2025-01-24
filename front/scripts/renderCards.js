@@ -1,6 +1,8 @@
 const movieToHtml = (movie) => {
     const container = document.createElement("div"); 
     container.classList.add("card", "bg-transparent", "border-0", "text-center");
+    container.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; 
+
    
     const image = document.createElement("img");
     image.src = movie.poster;
@@ -30,7 +32,7 @@ const movieToHtml = (movie) => {
 };
 
 const addToHTML = (data) => {
-    const movieCardsContainer = document.getElementById("movieCardsContainer"); //Pedirlo mediante el DOM
+    const movieCardsContainer = document.getElementById("movieCardsContainer"); 
 
     const movieElements = data.map(movieToHtml);
 
