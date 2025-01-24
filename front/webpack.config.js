@@ -9,7 +9,6 @@
 module.exports = {
     entry: {
         index: "./scripts/index.js",
-        about: "./scripts/aboutUs.js",
         movieForm: "./scripts/movieForm.js",
     },
     output: {
