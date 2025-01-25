@@ -1,0 +1,61 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco para contraste */
+  }
+  
+  /* Header */
+  .header-container {
+    margin-bottom: 0; /* Elimina el espacio extra en la parte inferior */
+  }
+  
+  /* Navbar */
+  .navbar {
+    margin-bottom: 0; /* Elimina el espacio adicional debajo del navbar */
+   
+  }
+  /* Main section */
+  main {
+    padding-top: 40px; /* Agrega un poco de espacio arriba */
+    padding-bottom: 40px; /* Agrega espacio en la parte inferior */
+  }
+  
+  /* Título */
+  h1 {
+    color: #fff; /* Texto blanco */
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* Contenedor de la sección sobre mí */
+  .container {
+    max-width: 960px;
+    margin: 0 auto; /* Centra el contenido */
+    padding: 30px;
+    background-color: #341957; /* Fondo oscuro pero más claro que el body */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Texto */
+  p {
+    font-size: 1.1rem;
+    color: #ddd; /* Texto gris claro */
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
