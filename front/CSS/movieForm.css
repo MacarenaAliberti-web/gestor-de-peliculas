@@ -1,147 +1,122 @@
-/* Elimina márgenes y paddings globales */
 body, html {
     margin: 0;
     padding: 0;
   }
-  
-  /* Header */
   header {
-    margin-bottom: 0; /* Asegura que el header no tenga margen extra */
+    margin-bottom: 0; 
   }
-  
-  /* Main */
   main {
-    padding: 20px 0; /* Espacio superior e inferior dentro del main */
-    margin: 0; /* Elimina márgenes adicionales */
+    padding: 20px 0; 
+    margin: 0; 
   }
-  
-  /* Contenedor principal */
   .movies-form-section {
-    margin: 40px auto; /* Espacio superior e inferior controlado */
-    padding: 20px; /* Espaciado interno */
+    margin: 40px auto; 
+    padding: 20px; 
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 40%;
     min-height: 80vh;
   }
-  
-
-/* Título */
 .movies-form-section > h1 {
-    color: #333; /* Título con color oscuro para contrastar */
+    color: #333; 
     font-size: 40px;
     margin-bottom: 20px;
-    border-bottom: 3px solid #222020; /* Color sólido para el subrayado */
-    text-align: center; /* Centra el texto horizontalmente */
-    width: 100%; /* Asegura que el h1 ocupe todo el ancho del contenedor */
-    text-align: center; /* Centra el texto horizontalmente */
-
+    border-bottom: 3px solid #222020; 
+    text-align: center; 
+    width: 100%; 
+    text-align: center; 
 }
-
-/* Input group */
 .input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Aumentar el margen entre los campos */
+    margin-bottom: 20px; 
 }
-
 .input-group > label {
-    color: #333; /* Color de las etiquetas oscuro */
+    color: #333; 
     margin-bottom: 5px;
-    font-size: 20px; /* Aumentar el tamaño de la fuente */
+    font-size: 20px; 
 }
-
 .input-group > input {
-    border: 1px solid #ccc; /* Borde gris claro */
+    border: 1px solid #ccc; 
     border-radius: 5px;
     padding: 10px;
     background-color: #fff;
     color: #333;
-    transition: border 0.3s ease; /* Transición suave al enfocar */
+    transition: border 0.3s ease; 
 }
-
 .input-group > input:focus {
-    border-color: #3232b8; /* Bordes azules al enfocar */
-    outline: none; /* Elimina el borde de enfoque predeterminado */
+    border-color: #3232b8; 
+    outline: none; 
 }
-
-/* Botones */
 .movie-form-buttons {
     display: flex;
-    flex-direction: column; /* Apilar los botones verticalmente */
-    gap: 15px; /* Espacio entre los botones */
+    flex-direction: column; 
+    gap: 15px; 
     width: 100%;
-    margin-top: 20px; /* Espacio superior */
+    margin-top: 20px;
 }
-
 .movie-form-buttons > button {
-    width: 100%; /* Ocupa todo el ancho */
+    width: 100%; 
     border: none;
-    border-radius: 8px; /* Bordes más suaves */
+    border-radius: 8px; 
     padding: 15px;
-    font-size: 16px; /* Tamaño de fuente adecuado */
-    font-weight: bold; /* Aumentar el peso de la fuente */
+    font-size: 16px; 
+    font-weight: bold; 
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease; /* Transición suave para efectos */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
-
 .movie-form-buttons > button:hover {
-    transform: scale(1.05); /* Efecto de agrandar */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
 }
-
 .clear-form-button {
-    background: #3232b8; /* Color para el botón de borrar */
+    background: #3232b8; 
 }
-
 .clear-form-button:hover {
-    background-color: #2a2a91; /* Cambio de color al pasar el ratón */
+    background-color: #2a2a91; 
 }
-
 .submit-form-button {
-    background: rgb(39, 173, 39); /* Color para el botón de enviar */
+    background: rgb(39, 173, 39); 
 }
-
 .submit-form-button:hover {
-    background-color: #32b532; /* Cambio de color al pasar el ratón */
+    background-color: #32b532; 
 }
-
 .movie-form-buttons > button:focus {
     outline: none;
-    border: 2px solid #3232b8; /* Borde azul cuando el botón está enfocado */
+    border: 2px solid #3232b8; 
 }
-
-/* Checkboxes */
 .genre-checkboxes {
     display: flex;
-    justify-content: space-evenly; /* Alineación más balanceada */
-    gap: 20px; /* Aumentar el espacio entre los checkboxes */
-    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando no caben */
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
 .genre-checkboxes > div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    font-size: 18px;
+    flex: 1 1 100%; /* Los elementos ocupan el 100% de su espacio en pantallas pequeñas */
+    max-width: 200px; /* Opcional: Limitar el tamaño máximo de los contenedores */
 }
 
-.genre-checkboxes > div > label {
-    color: #333;
-    margin-left: 5px; /* Agregar espacio entre el checkbox y la etiqueta */
-}
-
-/* Estilo de los placeholders */
-.input-group > input::placeholder {
-    color: #aaa; /* Color de los placeholders */
-}
-
-/* Optimización para pantallas pequeñas */
 @media (max-width: 768px) {
     .movies-form-section {
-        width: 80%; /* Más ancho en pantallas pequeñas */
+        width: 80%;
+        padding: 10px; /* Asegura que haya un poco de espacio alrededor */
+    }
+
+    .genre-checkboxes {
+        justify-content: flex-start; /* Cambia la distribución en pantallas pequeñas */
+    }
+
+    .genre-checkboxes > div {
+        flex: 1 1 45%; /* Ajusta el tamaño de los checkboxes para pantallas pequeñas */
     }
 }

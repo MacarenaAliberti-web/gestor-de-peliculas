@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    font-size: 2.5rem; /* Aumenta el tamaño del texto para hacerlo más prominente */
+    font-size: 2.5rem; 
     margin-bottom: 20px;
     margin-top: 20px;
     color: white;
@@ -8,7 +8,7 @@ h1 {
     padding: 50px;
     text-decoration: none;
     border: none;
-    font-family: 'Arial', sans-serif; /* Mejora la legibilidad */
+    font-family: 'Arial', sans-serif; 
 }
 
 .sitios-web {
@@ -19,11 +19,11 @@ h1 {
     gap: 20px;
     padding: 20px;
     border-radius: 15px;
-    background: linear-gradient(135deg, hsl(188, 96%, 18%), hsl(240, 3%, 6%)); /* Fondo degradado */
+    background: linear-gradient(135deg, hsl(188, 96%, 18%), hsl(240, 3%, 6%)); 
     margin: 20px auto;
     max-width: 40%;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para el contenedor */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
     transition: background 0.3s ease;
     margin-top: 20px;
 }
@@ -31,7 +31,7 @@ h1 {
 .sitios-web ul {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Aumenta el espacio entre los enlaces */
+    gap: 20px; 
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -51,19 +51,19 @@ h1 {
     width: 100%;
     box-sizing: border-box;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent; /* Agrega un borde transparente para mejorar la animación */
+    border: 2px solid transparent; 
 }
 
 .sitios-web a:hover {
     background-color: hsl(188, 96%, 35%);
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .sitios-web a:focus {
-    outline: 3px solid hsl(187, 82%, 96%); /* Contorno más visible al hacer foco */
+    outline: 3px solid hsl(187, 82%, 96%); 
     outline-offset: 4px;
-    box-shadow: 0 0 5px 2px hsl(187, 82%, 96%); /* Sombra extra para el foco */
+    box-shadow: 0 0 5px 2px hsl(187, 82%, 96%); 
 }
 
 .sitios-web li {
