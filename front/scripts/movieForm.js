@@ -97,6 +97,12 @@ try {
      genre:selectedGenre,
     });
     alert(res.data.message);
+    // Limpiar el formulario después de enviar exitosamente
+    movieForm.reset();
+    selectedGenre = []; // Limpiar los géneros seleccionados
+
+    // Opcional: desmarcar los checkboxes
+    document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
 } catch (error) {
     console.error(error.message);
     alert("Ocurrio un error al crear la pelicula, intente de nuevo mas tarde");
@@ -110,6 +116,9 @@ const clearFormButton = document.getElementById("clearFormButton");
 
 const clearForm = () => {
     movieForm.reset();
+    selectedGenre = [];
+    document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
 };
+
 
 clearFormButton.addEventListener("click", clearForm);
