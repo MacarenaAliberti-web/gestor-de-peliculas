@@ -5,7 +5,7 @@ const genres = [
     "Terror", "Drama", "Suspenso", "Melodrama", "Catastrofe", "Documentales"
 ];
 
-const genreCheckBoxesContainer = document.getElementById("genreCheckBoxes"); 
+const genreCheckBoxesContainer = document.getElementById("genreCheckBoxes");
 
 let selectedGenre = [];
 
@@ -15,9 +15,7 @@ const handleCheckboxContainer = (event) => {
     } else {
         selectedGenre = selectedGenre.filter((item) => item != event.target.value);
     }
-    console.log(selectedGenre);
 };
-
 genres.forEach((genre) => {
     const genreContainer = document.createElement("div");
 
@@ -37,61 +35,65 @@ genres.forEach((genre) => {
 
 const movieForm = document.getElementById("movieForm");
 
+const showError = (message) => {
+    const errorMessageContainer = document.getElementById("error-message");
+    errorMessageContainer.textContent = message; 
+    errorMessageContainer.style.display = "block"; 
+    errorMessageContainer.classList.add("show");
+
+    window.scrollTo({
+        top: errorMessageContainer.offsetTop - 50, 
+        behavior: "smooth"
+    });
+};
+const hideError = () => {
+    const errorMessageContainer = document.getElementById("error-message");
+    errorMessageContainer.style.display = "none"; 
+};
 const submitForm = async (event) => {
     event.preventDefault();
+
+    hideError();
 
     const formData = new FormData(event.target);
     const { title, year, director, duration, rate, poster, description, trailer } = Object.fromEntries(formData);
 
     if (!title) {
-        alert("El campo TITLE es requerido");
+        showError("El campo TITLE es requerido");
         return;
     }
-
     if (!year) {
-        alert("El campo AÑO es requerido");
+        showError("El campo AÑO es requerido");
         return;
     }
-
     if (!director) {
-        alert("El campo DIRECTOR es requerido");
+        showError("El campo DIRECTOR es requerido");
         return;
     }
-
     if (selectedGenre.length == 0) {
-        alert("Debes seleccionar al menos un Genero");
+        showError("Debes seleccionar al menos un Genero");
         return;
     }
-
     if (!duration) {
-        alert("El campo DURACION es requerido");
+        showError("El campo DURACION es requerido");
         return;
     }
-
     if (!rate) {
-        alert("El campo PUNTAJE es requerido");
+        showError("El campo PUNTAJE es requerido");
         return;
     }
-
     if (!poster) {
-        alert("El campo POSTER es requerido");
+        showError("El campo POSTER es requerido");
         return;
     }
-
     if (!description) {
-        alert("El campo DESCRIPCION es requerido");
+        showError("El campo DESCRIPCION es requerido");
         return;
     }
-
     if (!trailer) {
-        alert("El campo TRAILER es requerido");
+        showError("El campo TRAILER es requerido");
         return;
     }
-
-    console.log({
-        title, year, director, duration, rate, poster, description, trailer, genre: selectedGenre
-    });
-
     try {
         const res = await axios.post("http://localhost:3000/movies", {
             title,
@@ -111,10 +113,17 @@ const submitForm = async (event) => {
 
         document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
     } catch (error) {
-        console.error(error.message);
-        alert("Ocurrió un error al crear la película, intente de nuevo más tarde");
+        console.error("Error:", error.response ? error.response : error.message);
+        if (error.response && error.response.data && error.response.data.message) {
+            showError(error.response.data.message); 
+        } else {
+            showError("Ocurrió un error al crear la película, intente de nuevo más tarde");
+        }
     }
 };
+document.querySelectorAll("#movieForm input").forEach(input => {
+    input.addEventListener("input", hideError);
+});
 
 movieForm.addEventListener("submit", submitForm);
 
@@ -124,6 +133,8 @@ const clearForm = () => {
     movieForm.reset();
     selectedGenre = [];
     document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
+    
+    hideError();
 };
 
 clearFormButton.addEventListener("click", clearForm);
