@@ -7,8 +7,6 @@ const getDataMovie = async () => {
         addToHTML(res.data); 
     } catch (error) {
         console.error("Error al obtener las películas:", error.message);
-    } finally {
-        console.log("Finalizó la llamada a la API de películas.");
     } 
 };
 

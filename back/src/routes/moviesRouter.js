@@ -1,11 +1,11 @@
 const { Router } = require("express");
 const { getAllMovies, createMovie } = require("../controllers/moviesControllers");
-const validateMovie = require("../middlewares/validateMovie");
+const validateMovieData = require("../middlewares/validateMovieData");
 
 const moviesRouter = Router();
 
 moviesRouter.get("/", getAllMovies);
-moviesRouter.post("/", validateMovie, createMovie);
+moviesRouter.post("/", validateMovieData, createMovie);
 
 module.exports = moviesRouter;
 

@@ -15,7 +15,6 @@ const movieToHtml = (movie) => {
     button.innerText = "Más información";
     button.classList.add("btn", "btn-outline-primary", "btn-sm");
 
-    // Funcionalidad del botón para mostrar contenedor superpuesto
     button.addEventListener("click", () => {
         const overlay = document.createElement("div");
         overlay.classList.add("overlay");
@@ -35,7 +34,7 @@ const movieToHtml = (movie) => {
 
         const closeButton = document.createElement("button");
         closeButton.innerText = "Cerrar";
-        closeButton.classList.add("btn", "btn-danger");
+        closeButton.classList.add("btn");
         closeButton.addEventListener("click", () => {
             document.body.removeChild(overlay);
         });
@@ -89,14 +88,12 @@ const movieToHtml = (movie) => {
     return colContainer;
 };
 
-// Función para agregar películas al HTML
 const addToHTML = (data) => {
     const movieCardsContainer = document.getElementById("movieCardsContainer");
     const movieElements = data.map(movieToHtml);
     movieElements.forEach((movieElem) => movieCardsContainer.appendChild(movieElem));
 };
 
-// Evento para cerrar el modal cuando el usuario haga clic fuera del modal
 window.addEventListener("click", (event) => {
     const modal = document.querySelector(".modal-overlay");
     if (modal && event.target === modal) {

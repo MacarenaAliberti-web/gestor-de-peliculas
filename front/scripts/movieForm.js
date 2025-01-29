@@ -1,6 +1,9 @@
 const axios = require("axios");
 
-const genres = ["Accion", "Animacion", "Ciencia ficcion", "Fantasia", "Comedia", "Aventura", "Terror", "Drama", "Suspenso", "Melodrama", "Catastrofe", "Documentales"];
+const genres = [
+    "Accion", "Animacion", "Ciencia ficcion", "Fantasia", "Comedia", "Aventura",
+    "Terror", "Drama", "Suspenso", "Melodrama", "Catastrofe", "Documentales"
+];
 
 const genreCheckBoxesContainer = document.getElementById("genreCheckBoxes"); 
 
@@ -21,11 +24,11 @@ genres.forEach((genre) => {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.value = genre;
-    checkbox.id = `genre-${genre}`;
-
-checkbox.onchange = handleCheckboxContainer;
+    checkbox.id = `genre-${genre}`; 
+    checkbox.onchange = handleCheckboxContainer;
 
     const label = document.createElement("label");
+    label.setAttribute("for", `genre-${genre}`);  
     label.innerText = genre;
 
     genreContainer.append(checkbox, label);
@@ -38,7 +41,7 @@ const submitForm = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const {title, year, director, duration, rate, poster, description, trailer} = Object.fromEntries(formData);
+    const { title, year, director, duration, rate, poster, description, trailer } = Object.fromEntries(formData);
 
     if (!title) {
         alert("El campo TITLE es requerido");
@@ -55,7 +58,7 @@ const submitForm = async (event) => {
         return;
     }
 
-    if(selectedGenre.length == 0){
+    if (selectedGenre.length == 0) {
         alert("Debes seleccionar al menos un Genero");
         return;
     }
@@ -68,49 +71,52 @@ const submitForm = async (event) => {
     if (!rate) {
         alert("El campo PUNTAJE es requerido");
         return;
-    
     }
 
     if (!poster) {
         alert("El campo POSTER es requerido");
         return;
     }
+
     if (!description) {
         alert("El campo DESCRIPCION es requerido");
         return;
     }
+
     if (!trailer) {
         alert("El campo TRAILER es requerido");
         return;
     }
-console.log({title, year, director, duration, rate, poster, description, trailer, genre:selectedGenre});
-try {
-    const res = await axios.post("http://localhost:3000/movies", {
-     title, 
-     year, 
-     director, 
-     duration, 
-     rate, 
-     poster, 
-     description, 
-     trailer, 
-     genre:selectedGenre,
-    });
-    alert(res.data.message);
-    // Limpiar el formulario después de enviar exitosamente
-    movieForm.reset();
-    selectedGenre = []; // Limpiar los géneros seleccionados
 
-    // Opcional: desmarcar los checkboxes
-    document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
-} catch (error) {
-    console.error(error.message);
-    alert("Ocurrio un error al crear la pelicula, intente de nuevo mas tarde");
-}
+    console.log({
+        title, year, director, duration, rate, poster, description, trailer, genre: selectedGenre
+    });
+
+    try {
+        const res = await axios.post("http://localhost:3000/movies", {
+            title,
+            year,
+            director,
+            duration,
+            rate,
+            poster,
+            description,
+            trailer,
+            genre: selectedGenre,
+        });
+        alert(res.data.message);
+        
+        movieForm.reset();
+        selectedGenre = []; 
+
+        document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
+    } catch (error) {
+        console.error(error.message);
+        alert("Ocurrió un error al crear la película, intente de nuevo más tarde");
+    }
 };
 
-movieForm.addEventListener("submit",submitForm);
-
+movieForm.addEventListener("submit", submitForm);
 
 const clearFormButton = document.getElementById("clearFormButton");
 
@@ -119,6 +125,5 @@ const clearForm = () => {
     selectedGenre = [];
     document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => checkbox.checked = false);
 };
-
 
 clearFormButton.addEventListener("click", clearForm);

@@ -1,14 +1,11 @@
 h1 {
     text-align: center;
-    font-size: 2.5rem; 
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-size: 2.5rem;
+    margin: 20px 0;
     color: white;
-    width: 100%;
     padding: 50px;
-    text-decoration: none;
+    font-family: 'Arial', sans-serif;
     border: none;
-    font-family: 'Arial', sans-serif; 
 }
 
 .sitios-web {
@@ -19,22 +16,21 @@ h1 {
     gap: 20px;
     padding: 20px;
     border-radius: 15px;
-    background: linear-gradient(135deg, hsl(188, 96%, 18%), hsl(240, 3%, 6%)); 
+    background: linear-gradient(135deg, hsl(188, 96%, 18%), hsl(240, 3%, 6%));
     margin: 20px auto;
     max-width: 40%;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
-    margin-top: 20px;
 }
 
 .sitios-web ul {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
     padding: 0;
     margin: 0;
-    list-style-type: none;
+    list-style: none;
     align-items: center;
 }
 
@@ -50,20 +46,20 @@ h1 {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent; 
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .sitios-web a:hover {
     background-color: hsl(188, 96%, 35%);
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .sitios-web a:focus {
-    outline: 3px solid hsl(187, 82%, 96%); 
+    outline: 3px solid hsl(187, 82%, 96%);
     outline-offset: 4px;
-    box-shadow: 0 0 5px 2px hsl(187, 82%, 96%); 
+    box-shadow: 0 0 5px 2px hsl(187, 82%, 96%);
 }
 
 .sitios-web li {

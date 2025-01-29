@@ -1,15 +1,18 @@
 body, html {
     margin: 0;
     padding: 0;
-  }
-  header {
+}
+
+header {
     margin-bottom: 0; 
-  }
-  main {
+}
+
+main {
     padding: 20px 0; 
     margin: 0; 
-  }
-  .movies-form-section {
+}
+
+.movies-form-section {
     margin: 40px auto; 
     padding: 20px; 
     background-color: rgba(255, 255, 255, 0.8);
@@ -17,7 +20,8 @@ body, html {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 40%;
     min-height: 80vh;
-  }
+}
+
 .movies-form-section > h1 {
     color: #333; 
     font-size: 40px;
@@ -25,18 +29,20 @@ body, html {
     border-bottom: 3px solid #222020; 
     text-align: center; 
     width: 100%; 
-    text-align: center; 
 }
+
 .input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px; 
 }
+
 .input-group > label {
     color: #333; 
     margin-bottom: 5px;
     font-size: 20px; 
 }
+
 .input-group > input {
     border: 1px solid #ccc; 
     border-radius: 5px;
@@ -45,10 +51,12 @@ body, html {
     color: #333;
     transition: border 0.3s ease; 
 }
+
 .input-group > input:focus {
     border-color: #3232b8; 
     outline: none; 
 }
+
 .movie-form-buttons {
     display: flex;
     flex-direction: column; 
@@ -56,6 +64,7 @@ body, html {
     width: 100%;
     margin-top: 20px;
 }
+
 .movie-form-buttons > button {
     width: 100%; 
     border: none;
@@ -65,36 +74,44 @@ body, html {
     font-weight: bold; 
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease; 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
 .movie-form-buttons > button:hover {
     transform: scale(1.05); 
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
 }
+
 .clear-form-button {
     background: #3232b8; 
 }
+
 .clear-form-button:hover {
     background-color: #2a2a91; 
 }
+
 .submit-form-button {
     background: rgb(39, 173, 39); 
 }
+
 .submit-form-button:hover {
     background-color: #32b532; 
 }
+
 .movie-form-buttons > button:focus {
     outline: none;
     border: 2px solid #3232b8; 
+    background-color: rgba(50, 50, 184, 0.2);  /* Agregado para destacar el focus */
 }
+
 .genre-checkboxes {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando no caben */
+    flex-wrap: wrap; 
     justify-content: space-evenly;
     gap: 20px;
     width: 100%;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    box-sizing: border-box; 
 }
 
 .genre-checkboxes > div {
@@ -102,21 +119,27 @@ body, html {
     flex-direction: row;
     align-items: center;
     font-size: 18px;
-    flex: 1 1 100%; /* Los elementos ocupan el 100% de su espacio en pantallas pequeñas */
-    max-width: 200px; /* Opcional: Limitar el tamaño máximo de los contenedores */
+    flex: 1 1 100%; 
+    max-width: 200px; 
 }
 
 @media (max-width: 768px) {
     .movies-form-section {
         width: 80%;
-        padding: 10px; /* Asegura que haya un poco de espacio alrededor */
+        padding: 10px; 
     }
 
     .genre-checkboxes {
-        justify-content: flex-start; /* Cambia la distribución en pantallas pequeñas */
+        justify-content: flex-start; 
     }
 
     .genre-checkboxes > div {
-        flex: 1 1 45%; /* Ajusta el tamaño de los checkboxes para pantallas pequeñas */
+        flex: 1 1 45%; 
+    }
+}
+
+@media (max-width: 500px) {
+    .movies-form-section {
+        width: 90%;
     }
 }

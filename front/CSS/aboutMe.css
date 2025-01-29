@@ -3,95 +3,74 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #333; /* Fondo oscuro */
-  color: #fff; /* Texto blanco para contraste */
-  padding: 0 15px; /* Añadir algo de espacio en los laterales */
+  background-color: #333; 
+  color: #fff; 
 }
-
 h1, h2 {
-  color: #fff; /* Texto blanco */
+  color: #fff; 
   font-weight: bold;
-  line-height: 1.2; /* Ajusta el espaciado entre líneas */
+  line-height: 1.2; 
+  margin-bottom: 20px; 
 }
-
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
 }
-
 h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
 }
-
-/* Navbar */
 .navbar {
-  margin-bottom: 0; /* Elimina el espacio adicional debajo del navbar */
+  margin-bottom: 0; 
 }
-
-/* Main section */
 main {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #222; /* Fondo más oscuro para la sección principal */
+  background-color: #222; 
   border-radius: 10px;
 }
-
-/* Contenedor de la sección sobre mí */
 .container {
   max-width: 960px;
-  margin: 0 auto; /* Centra el contenido */
+  margin: 0 auto; 
   padding: 30px;
   background: linear-gradient(135deg, hsl(188, 96%, 18%), hsl(240, 3%, 6%));
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar la sección */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
-
-/* Imagen */
 .img-thumbnail {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
   border-radius: 10px;
 }
-
-/* Texto */
 p {
   font-size: 1.1rem;
-  color: #ddd; /* Texto gris claro */
+  color: #ddd; 
   margin-bottom: 20px;
-  line-height: 1.8; /* Mejora la legibilidad aumentando el espaciado */
+  line-height: 1.8; 
 }
-
-/* Enlaces */
 a {
-  color: #4e5b6e; /* Un color suave pero visible para los enlaces */
-  text-decoration: none; /* Elimina el subrayado */
+  color: #4e5b6e; 
+  text-decoration: none; 
 }
-
 a:hover {
-  color: #fff; /* Cambia el color del enlace cuando se pasa el mouse */
-  text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+  color: #fff; 
+  text-decoration: underline; 
 }
-/* Estilos para el cuadro con zoom */
 .zoom-box {
   display: inline-block;
   padding: 15px;
-  background-color: #fff; /* Fondo blanco */
-  color: #000; /* Color de texto negro */
-  border: 2px solid #4e5b6e; /* Borde de color suave */
-  border-radius: 10px; /* Bordes redondeados */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el zoom y la sombra */
+  background-color: #fff; 
+  color: #000; 
+  border: 2px solid #4e5b6e; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 .zoom-box:hover {
-  transform: scale(1.05); /* Hace un pequeño zoom */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra más notoria al pasar el cursor */
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
