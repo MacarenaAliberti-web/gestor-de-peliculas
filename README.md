@@ -86,7 +86,7 @@ Asegurate de tener MongoDB corriendo localmente (o ajustá la conexión si usás
 ## 👩‍💻 Autor
 
 **Macarena Aliberti**  
-Desarrolladora Frontend con formación en desarrollo Full Stack.
+Desarrolladora Full Stack.
 
 ---
 
